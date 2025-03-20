@@ -179,7 +179,7 @@ const TrafficSystemLayout = () => {
   useEffect(() => {
     // Create WebSocket connections for all stations
     const connections = stations.map((station) => {
-      const ws = new WebSocket(`ws://${station.ip}:81`);
+      const ws = new WebSocket(`wss://${station.ip}:81`);
 
       ws.onopen = () => {
         setStationStates((prev) => ({
